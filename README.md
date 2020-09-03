@@ -13,6 +13,9 @@ test('renders', () => {
   debug()
 })
 ```
+- Snapshots are good, but consider thinking about put them inline instead of creating a new file, because the files can become very long and unreadable
+
+- Snapshots can be useful to test components, because they can test the render of the elements
 
 ### identity-obj-proxy
 - This library allow us to identity object using ES6 proxies. Useful for mocking webpack imports. For instance, you can tell Jest to mock this object as imported CSS modules; then all your className lookups on the imported styles object will be returned as-is.
