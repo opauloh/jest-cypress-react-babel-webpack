@@ -1,11 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return super heroes that can fly 1`] = `
+exports[`return super heroes that can fly with snapshot 1`] = `
 Array [
   Object {
     "name": "Dynaguy",
     "powers": Array [
       "laser",
+      "fly",
+    ],
+  },
+  Object {
+    "name": "dri3lis",
+    "powers": Array [
+      "premonition",
       "fly",
     ],
   },
