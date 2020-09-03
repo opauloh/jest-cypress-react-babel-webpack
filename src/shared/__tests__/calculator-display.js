@@ -8,6 +8,7 @@ test('renders', () => {
     <div>
       <div
         class="css-lq9ahq-calculator-display--CalculatorDisplay"
+        id="calculator-display"
       >
         <div
           class="autoScalingText"
