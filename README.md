@@ -15,7 +15,7 @@ test('renders', () => {
 ```
 - Snapshots are good, but consider thinking about put them inline instead of creating a new file, because the files can become very long and unreadable
 
-- Snapshots can be useful to test components, because they can test the render of the elements
+- Snapshots can be useful to test components, because they can test the render of the elements, I should add here that when you're using toMatchInlineSnapshot(), you are required to have Prettier installed in your project because jest is updating the code in your test file and it wants to make sure that it doesn't change more than it has to with regard to your formatting. If you don't have Prettier installed, then you have to use toMatchSnapshot()
 
 ### identity-obj-proxy
 - This library allow us to identity object using ES6 proxies. Useful for mocking webpack imports. For instance, you can tell Jest to mock this object as imported CSS modules; then all your className lookups on the imported styles object will be returned as-is.
