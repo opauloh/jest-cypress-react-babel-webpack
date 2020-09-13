@@ -17,8 +17,28 @@ test('renders', () => {
 
 - Snapshots can be useful to test components, because they can test the render of the elements, I should add here that when you're using toMatchInlineSnapshot(), you are required to have Prettier installed in your project because jest is updating the code in your test file and it wants to make sure that it doesn't change more than it has to with regard to your formatting. If you don't have Prettier installed, then you have to use toMatchSnapshot()
 
+- We can configure webpack to resolve specific folders, so we can include everything in these folders without specifing all the relative imports, this is useful to speed up development
+```
+resolve: {
+    modules: ['node_modules', path.join(__dirname, 'src'), 'shared'],
+}
+// ... 
+import CalculatorDisplay from 'calculator-display' // this file is on the shared folder, but can be used anywhere
+```
+- We can configure jest to resolve the same modules as in webpack with the "moduleDirectories" option: 
+```
+moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared']
+```
+- When handling DOM assertions we can use @testing-library/jest-dom library, and there is even a option pre-built for extend the expect assertion from jest with @testing-library/jest-dom/extend-expect, also we can configure it directly in jest.config.js to always load this file, using the setupFilesAfterEnv of jest config
+```
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect']
+``` 
 ### identity-obj-proxy
 - This library allow us to identity object using ES6 proxies. Useful for mocking webpack imports. For instance, you can tell Jest to mock this object as imported CSS modules; then all your className lookups on the imported styles object will be returned as-is.
+
+### jest-emotion
+- This library help to identify what part of the css actually changed between different snapshots, it is very useful to speed up tests
+
 
 
 > Note: This project is intentionally over-engineered. The application itself is
