@@ -1,9 +1,9 @@
-import React from 'react';
-import { fireEvent, render } from "@testing-library/react";
-import Calculator from '../calculator';
+import React from 'react'
+import {fireEvent, render} from 'calculator-test-utils'
+import Calculator from '../calculator'
 
 test('the clear button switches from AC to C when there is an entry', () => {
-  const { getByText } = render(<Calculator />)
+  const {getByText} = render(<Calculator />)
   const clearButton = getByText('AC')
 
   fireEvent.click(getByText(/3/))
@@ -11,5 +11,4 @@ test('the clear button switches from AC to C when there is an entry', () => {
 
   fireEvent.click(clearButton)
   expect(clearButton).toHaveTextContent('AC')
-
 })
