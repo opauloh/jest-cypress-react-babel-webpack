@@ -63,6 +63,9 @@ moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared']
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect']
 ```
 
+- We can use node --inspect-brk to run our codes with debugger from the chrome
+  engine of our browser
+
 ### identity-obj-proxy
 
 - This library allow us to identity object using ES6 proxies. Useful for mocking
