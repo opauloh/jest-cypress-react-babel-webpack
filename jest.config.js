@@ -15,4 +15,5 @@ module.exports = {
     path.join(__dirname, 'test'),
   ],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  collectCoverageFrom: ['**/src/**/*.js'],
 }
