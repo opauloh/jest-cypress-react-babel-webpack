@@ -1,12 +1,12 @@
 import React from 'react'
-import {fireEvent, render} from 'calculator-test-utils'
+import {fireEvent, render, screen} from 'calculator-test-utils'
 import Calculator from '../calculator'
 
 test('the clear button switches from AC to C when there is an entry', () => {
-  const {getByText} = render(<Calculator />)
-  const clearButton = getByText('AC')
+  render(<Calculator />)
+  const clearButton = screen.getByText('AC')
 
-  fireEvent.click(getByText(/3/))
+  fireEvent.click(screen.getByText(/3/))
   expect(clearButton).toHaveTextContent('C')
 
   fireEvent.click(clearButton)
