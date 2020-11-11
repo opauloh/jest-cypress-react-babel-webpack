@@ -156,15 +156,13 @@ coverageThreshold: {
   warning against imports that are only in the jest config, also we can write it
   on the jsconfig.js to make our editor map the files when we click over it
 
+### is-ci-cli
+
+- With this library we can run specific scripts for CI environments, like in
+  this example we want to run coverage when in CI and watch when not in CI, to
+  run with npm t
+
 > Note: This project is intentionally over-engineered. The application itself is
 > very simple, but the tooling around it is pretty complicated. The goal is to
 > show what configuration would be like for a large real-world application
 > without having all the extra complexities of a real-world application.
-
-```
-
-```
-
-```
-
-```
