@@ -1,4 +1,8 @@
+<!-- prettier-ignore-start -->
 ![Build Status](https://api.travis-ci.com/opauloh/jest-cypress-react-babel-webpack.svg?branch=master&status=passed)
+[![codecov](https://codecov.io/gh/opauloh/jest-cypress-react-babel-webpack/branch/master/graph/badge.svg)](https://codecov.io/gh/opauloh/jest-cypress-react-babel-webpack)
+
+<!-- prettier-ignore-end -->
 
 ### notes
 
