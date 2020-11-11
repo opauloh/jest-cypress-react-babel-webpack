@@ -75,6 +75,63 @@ moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared']
   collectCoverageFrom: ['**/src/**/*.js'],
 ```
 
+- Also to enable coverage we add the --coverage flag on our test command in
+  package.json, we don't add it to watch, or our coverage file will be confused
+  with partial tests if we run partial on our watch
+
+```
+    "test": "jest --coverage",
+```
+
+- Jest knows about the coverage because it uses the plugin
+  **babel-plugin-istanbul**, that transforms the code to instrument for
+  coverage. And, if needed, we can disable coverage for certain parts of the
+  code passing the instruction to istanbul:
+
+```js
+/* istanbul ignore next */
+
+if (actualScale < 1) {
+  return actualScale * 0.9
+}
+```
+
+- If we want our code to not decrease coverage, we can configure
+  coverageThreshold on jest.config, by using:
+
+```js
+coverageThreshold: {
+    global: {
+      statements: 34,
+      branches: 16,
+      functions: 29,
+      lines: 32,
+    }
+  }
+```
+
+In this scenario, the global threshold was configured by using the current
+scenario, with 2% lower to provide some flexibility, also if we need to
+configure threshold for specific files (for example files that are more
+importants), we can use as follows:
+
+```js
+coverageThreshold: {
+    global: {
+      statements: 34,
+      branches: 16,
+      functions: 29,
+      lines: 32,
+    },
+    './src/shared/utils.js': {
+      statements: 100,
+      branches: 80,
+      functions: 100,
+      lines: 100,
+    },
+  }
+```
+
 ### identity-obj-proxy
 
 - This library allow us to identity object using ES6 proxies. Useful for mocking
@@ -97,3 +154,11 @@ moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared']
 > very simple, but the tooling around it is pretty complicated. The goal is to
 > show what configuration would be like for a large real-world application
 > without having all the extra complexities of a real-world application.
+
+```
+
+```
+
+```
+
+```
