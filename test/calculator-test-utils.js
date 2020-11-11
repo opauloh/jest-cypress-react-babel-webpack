@@ -1,5 +1,5 @@
 import React from 'react'
-import {render as rtlRender} from '@testing-library/react'
+import {screen, render as rtlRender} from '@testing-library/react'
 import {ThemeProvider} from 'emotion-theming'
 import PropTypes from 'prop-types'
 import * as themes from '../src/themes'
@@ -16,4 +16,4 @@ function render(ui, {theme = themes.dark, ...options} = {}) {
 }
 
 export * from '@testing-library/react'
-export {render}
+export {render, screen}
