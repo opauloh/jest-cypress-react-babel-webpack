@@ -66,6 +66,15 @@ moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared']
 - We can use node --inspect-brk to run our codes with debugger from the chrome
   engine of our browser
 
+- When using coverage to see how much of our code is covered by tests, we should
+  specify which part of our application matters to be covered, or files like our
+  utilities files will be included and obfuse our percentage. We can specify
+  this in jest.config.js:
+
+```
+  collectCoverageFrom: ['**/src/**/*.js'],
+```
+
 ### identity-obj-proxy
 
 - This library allow us to identity object using ES6 proxies. Useful for mocking
