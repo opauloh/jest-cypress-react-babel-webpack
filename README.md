@@ -1,3 +1,5 @@
+![Build Status](https://api.travis-ci.com/opauloh/jest-cypress-react-babel-webpack.svg?branch=master&status=passed)
+
 ### notes
 
 - window object are available when you define your environment in jest.config.js
