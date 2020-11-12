@@ -172,6 +172,16 @@ coverageThreshold: {
   this example we want to run coverage when in CI and watch when not in CI, to
   run with npm t
 
+### jest-runner-eslint
+
+- This library allows us to run eslint during tests, so the linting occurs
+  naturally as part of our tests, and do not need to be run as a separated
+  eslint command, and also we can specify to lint only files we are working
+  with. It can be nice for bigger projects where you have tons of files that
+  you're linting and you want to scope down the files that you're linting to
+  just the ones that you're working with at the time you're committing your
+  code.
+
 > Note: This project is intentionally over-engineered. The application itself is
 > very simple, but the tooling around it is pretty complicated. The goal is to
 > show what configuration would be like for a large real-world application
