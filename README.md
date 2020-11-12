@@ -158,6 +158,11 @@ module.exports = {
 }
 ```
 
+- We can add pre-commit checking with husky, to run all tests our CI would run
+  in the files we changed, to reduce the chances of our code breaking on CI, so
+  this makes our workflow fast because we can almost always move on to another
+  project once we push one feature, because we know that CI was going to pass
+
 ### identity-obj-proxy
 
 - This library allow us to identity object using ES6 proxies. Useful for mocking
@@ -201,6 +206,18 @@ module.exports = {
 
 - This jest watch plugin allows us to filter which files to test by filename and
   by test name
+
+### husky
+
+- If you have to always run a script before your commits (or other git hooks
+  like push, pull), you can use husky to altomate this task for you, in this
+  case was used to run our validate command
+
+### lint-staged
+
+- In order to prevent our lint running always in all files in the project, we
+  added lint-staged, this tool allow us to run our lint just in git staged
+  files, before the commit
 
 > Note: This project is intentionally over-engineered. The application itself is
 > very simple, but the tooling around it is pretty complicated. The goal is to
