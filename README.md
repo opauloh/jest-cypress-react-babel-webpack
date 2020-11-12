@@ -143,6 +143,11 @@ coverageThreshold: {
   created a jest-common.js file, jest.client.js and jest.server.js file, and
   these two last files has the configurations for each environment.
 
+- Also, we can combine these multiple configurations into jest.config.js by
+  using the projects property,
+  `projects: ['./test/jest.client.js', './test/jest.server.js'],`, the jest can
+  be able to run multiple environments at once
+
 ### identity-obj-proxy
 
 - This library allow us to identity object using ES6 proxies. Useful for mocking
