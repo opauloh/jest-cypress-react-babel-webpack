@@ -197,6 +197,11 @@ module.exports = {
 - This is a jest watch plugin, that allows us to filter our watch mode by
   projects
 
+### jest-watch-typeahead
+
+- This jest watch plugin allows us to filter which files to test by filename and
+  by test name
+
 > Note: This project is intentionally over-engineered. The application itself is
 > very simple, but the tooling around it is pretty complicated. The goal is to
 > show what configuration would be like for a large real-world application
