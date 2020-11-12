@@ -148,6 +148,16 @@ coverageThreshold: {
   `projects: ['./test/jest.client.js', './test/jest.server.js'],`, the jest can
   be able to run multiple environments at once
 
+- One thing about jest's watch mode is that is pluggable, and we can configure
+  it in our config like that:
+
+```js
+module.exports = {
+  // ...
+  watchPlugins: ['jest-watch-select-projects'], //['pluginName']
+}
+```
+
 ### identity-obj-proxy
 
 - This library allow us to identity object using ES6 proxies. Useful for mocking
@@ -181,6 +191,11 @@ coverageThreshold: {
   you're linting and you want to scope down the files that you're linting to
   just the ones that you're working with at the time you're committing your
   code.
+
+### jest-watch-select-projects
+
+- This is a jest watch plugin, that allows us to filter our watch mode by
+  projects
 
 > Note: This project is intentionally over-engineered. The application itself is
 > very simple, but the tooling around it is pretty complicated. The goal is to
