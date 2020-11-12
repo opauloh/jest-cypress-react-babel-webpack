@@ -138,6 +138,11 @@ coverageThreshold: {
   }
 ```
 
+- When you have test scripts that must run on server side, Its possible to
+  configure jest to choose in which environment to use, in order to do that we
+  created a jest-common.js file, jest.client.js and jest.server.js file, and
+  these two last files has the configurations for each environment
+
 ### identity-obj-proxy
 
 - This library allow us to identity object using ES6 proxies. Useful for mocking
